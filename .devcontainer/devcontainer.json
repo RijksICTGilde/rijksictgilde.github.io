@@ -1,0 +1,35 @@
+{
+    "name": "jekyll",
+    "image": "mcr.microsoft.com/devcontainers/jekyll:bookworm",
+    "containerEnv": {
+        "DEVCONTAINER": "1"
+    },
+    "forwardPorts": [
+        4000
+    ],
+    "postStartCommand": "bundle exec jekyll serve --livereload",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "editorconfig.editorconfig",
+                "streetsidesoftware.code-spell-checker",
+                "redhat.vscode-yaml",
+                "github.vscode-github-actions",
+                "davidanson.vscode-markdownlint"
+            ],
+            "settings": {
+                "editor.formatOnPaste": false,
+                "editor.formatOnSave": true,
+                "editor.formatOnType": true,
+                "files.trimTrailingWhitespace": true,
+                "terminal.integrated.inheritEnv": true,
+                "terminal.integrated.profiles.linux": {
+                    "zsh": {
+                        "path": "/usr/bin/zsh"
+                    }
+                },
+                "terminal.integrated.defaultProfile.linux": "zsh"
+            }
+        }
+    }
+}
