@@ -1,32 +1,34 @@
 title: Rijks ICT Gilde
 email: RIG@rijksoverheid.nl
 description: >-
-  Rijks ICT Gilde
-baseurl: "" # the subpath of your site, e.g. /blog
+    Rijks ICT Gilde
 source: .
 timezone: Europe/Amsterdam
 url: "https://rijksictgilde.github.com"
 github_username: rijksictgilde
+baseurl: ""
 
 postcss:
-  cache: false
+    cache: false
 
 plugins:
-  - jekyll-feed
+    - jekyll-feed
 
 liquid:
-  error_mode: warn
-
-verbose: true
+    error_mode: warn
 
 exclude:
-  - package.json
-  - Makefile
-  - postcss.config.js
-  - tailwind.config.js
-  - yarn.lock
-  - node_modules
-  - .gitignore
-  - .devcontainer
-  - .vscode
-  - .github
+    - package.json
+    - Makefile
+    - postcss.config.js
+    - tailwind.config.js
+    - yarn.lock
+    - .gitignore
+    - .devcontainer
+    - .vscode
+    - .github
+    - node_modules
+    - Gemfile
+    - Gemfile.lock
+
+safe: true
