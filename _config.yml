@@ -1,33 +1,32 @@
 title: Rijks ICT Gilde
 email: RIG@rijksoverheid.nl
-description: >- # this means to ignore newlines until "baseurl:"
-    Rijks ICT Gilde
+description: >-
+  Rijks ICT Gilde
 baseurl: "" # the subpath of your site, e.g. /blog
 source: .
 timezone: Europe/Amsterdam
-url: "rijksictgilde.github.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://rijksictgilde.github.com"
 github_username: rijksictgilde
 
-remote_theme: pages-themes/hacker@v0.2.0
+postcss:
+  cache: false
+
 plugins:
-    - jekyll-feed
-    - jekyll-remote-theme
+  - jekyll-feed
 
 liquid:
-    error_mode: warn
+  error_mode: warn
 
 verbose: true
 
-sass:
-    style: compressed
-    sourcemap: development
-
-lsi: false
-safe: true
-incremental: false
-highlighter: rouge
-gist:
-    noscript: false
-kramdown:
-    math_engine: mathjax
-    syntax_highlighter: rouge
+exclude:
+  - package.json
+  - Makefile
+  - postcss.config.js
+  - tailwind.config.js
+  - yarn.lock
+  - node_modules
+  - .gitignore
+  - .devcontainer
+  - .vscode
+  - .github

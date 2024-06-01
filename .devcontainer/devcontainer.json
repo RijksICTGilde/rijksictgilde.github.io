@@ -2,12 +2,16 @@
     "name": "jekyll",
     "image": "mcr.microsoft.com/devcontainers/jekyll:bookworm",
     "containerEnv": {
-        "DEVCONTAINER": "1"
+        "DEVCONTAINER": "1",
+        "JEKYLL_ENV": "development"
     },
     "forwardPorts": [
         4000
     ],
     "postStartCommand": "bundle exec jekyll serve --livereload",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
     "customizations": {
         "vscode": {
             "extensions": [
@@ -28,7 +32,10 @@
                         "path": "/usr/bin/zsh"
                     }
                 },
-                "terminal.integrated.defaultProfile.linux": "zsh"
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "[css]": {
+                    "editor.formatOnSave": false
+                }
             }
         }
     }
