@@ -3,7 +3,7 @@ description: >-
     Rijks ICT Gilde
 source: .
 timezone: Europe/Amsterdam
-url: "https://rijksictgilde.github.com"
+url: "https://rijksictgilde.github.io"
 baseurl: ""
 
 postcss:
