@@ -1,21 +1,18 @@
 title: Rijks ICT Gilde
-email: RIG@rijksoverheid.nl
 description: >-
     Rijks ICT Gilde
 source: .
 timezone: Europe/Amsterdam
 url: "https://rijksictgilde.github.com"
-github_username: rijksictgilde
 baseurl: ""
 
 postcss:
     cache: false
 
-plugins:
-    - jekyll-feed
+markdown_ext: "md"
 
-liquid:
-    error_mode: warn
+kramdown:
+  syntax_highlighter: coderay
 
 exclude:
     - package.json
@@ -31,4 +28,19 @@ exclude:
     - Gemfile
     - Gemfile.lock
 
-safe: true
+sass:
+    style: compressed
+    sourcemap: development
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+
