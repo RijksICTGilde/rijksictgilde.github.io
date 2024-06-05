@@ -2,8 +2,6 @@
 layout: page
 ---
 
-# Posts
+# About
 
-{% for post in site.posts %}
-* {{ post.title }}
-{% endfor %}
+Nothing here yet
