@@ -6,8 +6,8 @@
         "@tailwindcss/typography": "^0.5.13",
         "autoprefixer": "^10.4.19",
         "cssnano": "^7.0.3",
-        "daisyui": "^4.12.7",
-        "postcss": "^8.4.38",
+        "daisyui": "^4.12.10",
+        "postcss": "^8.4.39",
         "postcss-cli": "^11.0.0",
         "postcss-import": "^16.1.0",
         "tailwindcss": "^3.4.4"
