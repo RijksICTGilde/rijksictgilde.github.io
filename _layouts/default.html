@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html data-theme="cupcake" lang="{{ page.lang | default: site.lang | default: " en" }}">
+<html data-theme="light" lang="{{ page.lang | default: site.lang | default: "nl" }}">
 
-{%- include head.html -%}
-
+{% if page.lang == "en" %}
+  {%- include en/head-en.html -%}
+{% else %}
+  {%- include nl/head.html -%}
+{% endif %}
 <body>
 
-    {%- include header.html -%}
+    {% if page.lang == "en" %}
+        {%- include en/header.html -%}
+    {% else %}
+        {%- include nl/header.html -%}
+    {% endif %}
 
     <main class="page-content" aria-label="Content">
         <div class="wrapper py-10">
             {{ content }}
         </div>
     </main>
-
-    {%- include footer.html -%}
+    {% if page.lang == "en" %}
+        {%- include en/footer.html -%}
+    {% else %}
+        {%- include nl/footer.html -%}
+    {% endif %}
 
 </body>
 

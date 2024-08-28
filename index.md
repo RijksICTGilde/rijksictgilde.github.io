@@ -1,9 +1,5 @@
 ---
-layout: home
+permalink: /nl/
+redirect_from:
+  - /
 ---
-
-# Posts
-
-{% for post in site.posts %}
-* {{ post.title }}
-{% endfor %}

@@ -1,7 +1,6 @@
 ---
-layout: page
 ---
 
-# About
+# How we work
 
 Nothing here yet

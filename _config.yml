@@ -19,6 +19,7 @@ exclude:
     - Makefile
     - postcss.config.js
     - tailwind.config.js
+    - .stylelintrs.json
     - yarn.lock
     - .gitignore
     - .devcontainer
@@ -27,6 +28,7 @@ exclude:
     - node_modules
     - Gemfile
     - Gemfile.lock
+    - README.md
 
 sass:
     style: compressed
@@ -38,9 +40,32 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+      language: nl
   - scope:
-      path: "_posts"
+      path: "en/"
+      type: "pages"
+    values:
+      layout: "page"
+      language: en
+  - scope:
+      path: "nl/"
+      type: "pages"
+    values:
+      layout: "page"
+      language: nl
+  - scope:
+      path: "_posts/en"
       type: "posts"
     values:
       layout: "post"
+      permalink: 'stories/:title'
+      language: en
+  - scope:
+      path: "_posts/nl"
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: 'verhalen/:title'
+      language: nl
+
 
